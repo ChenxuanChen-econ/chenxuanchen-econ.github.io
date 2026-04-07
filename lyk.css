@@ -1,105 +1,178 @@
-/* 全局基础设置 */
+/* ===== 全局基础设置（更学术、更高级） ===== */
 body { 
-    font-family: "Segoe UI", "Palatino", "Source Sans Pro", serif; 
-    line-height: 1.6; 
-    max-width: 1000px; /* 稍微放宽以适应并列布局 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Palatino", "Source Sans Pro", serif; 
+    line-height: 1.75; 
+    max-width: 980px;
     margin: 0 auto; 
-    padding: 20px 40px; 
+    padding: 30px 50px; 
     color: #222;
-    background-color: #fdfdfd;
+    background-color: #fafafa; /* 更柔和背景 */
+    letter-spacing: 0.2px;
 }
 
-/* 1. 导航栏：推至右上角 */
+/* ===== 导航栏（更简洁 + hover下划线动画） ===== */
 nav { 
     display: flex;
-    justify-content: flex-end; /* 核心：将链接推向右侧 */
-    padding: 20px 0;
-    margin-bottom: 60px;
+    justify-content: flex-end;
+    padding: 10px 0 25px 0;
+    margin-bottom: 70px;
     border-bottom: 1px solid #eee;
 }
 
 nav a { 
+    position: relative;
     text-decoration: none; 
     color: #555; 
     font-weight: 500; 
-    margin-left: 30px; /* 使用左间距隔开链接 */
+    margin-left: 28px;
     font-size: 1.05em;
-    transition: color 0.3s;
+    padding-bottom: 4px;
+}
+
+/* 下划线动画（关键高级感） */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #980000;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
 }
 
 nav a:hover, nav a.active { 
-    color: #980000; /* 北大红 */
+    color: #980000;
 }
 
-/* 2. 主页核心布局：居中且左右并列 */
+/* ===== 主页布局 ===== */
 .profile-header { 
     display: flex; 
-    gap: 60px; 
+    gap: 70px; 
     align-items: center; 
-    justify-content: center; /* 核心：在页面中间水平排列 */
-    min-height: 40vh; /* 给主体内容一些垂直呼吸空间 */
-    margin-bottom: 60px;
+    justify-content: center;
+    min-height: 45vh;
+    margin-bottom: 80px;
 }
 
-/* 头像装饰 */
+/* ===== 头像（更精致） ===== */
 .profile-header img {
     width: 220px;
     height: 220px;
     object-fit: cover;
-    border-radius: 50%; /* 圆形头像更现代 */
-    border: 4px solid #fff;
-    box-shadow: 0 10px 30px rgba(152, 0, 0, 0.1);
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
 }
 
-/* 文字介绍区域 */
+.profile-header img:hover {
+    transform: scale(1.03);
+}
+
+/* ===== 文字区域 ===== */
 .profile-info {
-    max-width: 500px;
+    max-width: 520px;
 }
 
 .profile-info h1 {
-    font-size: 2.5rem;
-    margin: 0 0 10px 0;
-    color: #1a1a1a;
+    font-size: 2.6rem;
+    margin: 0 0 12px 0;
+    color: #111;
+    letter-spacing: 0.5px;
 }
 
+/* 副标题（建议你加 affiliation） */
+.profile-info p {
+    font-size: 1.05rem;
+    color: #444;
+}
+
+/* ===== CV按钮（更高级） ===== */
 .cv-button {
     display: inline-block;
-    background-color: #980000;
+    background: linear-gradient(135deg, #980000, #b30000);
     color: white;
-    padding: 12px 25px;
+    padding: 12px 26px;
     text-decoration: none;
-    border-radius: 4px;
-    margin-top: 20px;
+    border-radius: 6px;
+    margin-top: 22px;
     font-weight: 500;
-    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    transition: all 0.25s ease;
 }
 
 .cv-button:hover {
-    background-color: #7a0000;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(152, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(152, 0, 0, 0.25);
 }
 
-/* 下方板块标题装饰 */
+/* ===== Section标题（更“期刊风”） ===== */
 h2 {
-    font-size: 1.6rem;
-    color: #1a1a1a;
-    border-left: 5px solid #980000;
-    padding-left: 15px;
-    margin-top: 50px;
+    font-size: 1.5rem;
+    color: #111;
+    border-left: 4px solid #980000;
+    padding-left: 14px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
-/* 3. 响应式适配：手机端恢复垂直堆叠 */
+/* ===== 列表优化（论文/研究更清爽） ===== */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* ===== 链接风格统一 ===== */
+a {
+    color: #980000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== subtle 分割线 ===== */
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 50px 0;
+}
+
+/* ===== 响应式 ===== */
 @media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
     nav { 
-        justify-content: center; /* 手机端导航居中 */
+        justify-content: center;
     }
+
     nav a {
-        margin: 0 15px;
+        margin: 0 12px;
     }
+
     .profile-header { 
         flex-direction: column; 
         text-align: center;
-        gap: 30px;
+        gap: 35px;
+    }
+
+    .profile-header img {
+        width: 180px;
+        height: 180px;
     }
 }
