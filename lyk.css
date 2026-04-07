@@ -1,127 +1,45 @@
-body {
-	color: #000000;
-	background-color: #FFFFFF;
-	margin: 30px 50px 15px 50px;
-	max-width: 1200;
-	text-align: justify;
-	font-family: "Palatino Linotype", "Microsoft yahei", "Book Antiqua", Palatino, serif;
+body { 
+    font-family: "Segoe UI", "Palatino", serif; 
+    line-height: 1.6; 
+    max-width: 850px; 
+    margin: 0 auto; 
+    padding: 30px; 
+    color: #333; 
 }
 
-img {
-	vertical-align: middle;
-	border: 0;
+/* 导航栏样式 */
+nav { 
+    border-bottom: 2px solid #003366; 
+    padding-bottom: 10px; 
+    margin-bottom: 30px; 
+}
+nav a { 
+    text-decoration: none; 
+    color: #003366; 
+    font-weight: bold; 
+    margin-right: 20px; 
+    font-size: 1.1em;
+}
+nav a:hover { color: #cc0000; }
+
+/* 响应式头像布局 */
+.profile-header { 
+    display: flex; 
+    gap: 40px; 
+    align-items: center; 
+    margin-bottom: 40px;
 }
 
-a.intlink {
-	color: #008000;
+.cv-button {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
-h1 {
-	font-family: "Palatino Linotype", "Microsoft yahei", "Book Antiqua", Palatino, serif;
-}
-
-h3,h4,h5 {
-	font-family: "Palatino Linotype", "Microsoft yahei", "Book Antiqua", Palatino, serif;
-}
-
-hr {
-	height: 1px;
-}
-
-.year {
-	padding-left: 50px;
-	clear: both;
-	padding-right: 50px;
-	padding-top: 20px;
-}
-
-.keywords {
-	margin-left: 20px;
-	clear: both;
-}
-
-.keyword {
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-khtml-border-radius: 3px;
-	border-radius: 3px;
-	float: left;
-	background: #CCCCCC;
-	margin-right: 10px;
-	padding-left: 5px;
-	padding-right: 5px;
-}
-
-.JF {
-	font-style: italic;
-	margin-left: 20px;
-}
-
-.authors {
-	margin-left: 20px;
-}
-
-.paper {
-	padding-top: 2px;
-	padding-bottom: 2px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 20px;
-	font-size: 12px;
-}
-
-.note {
-	clear: both;
-	margin-left: 40px;
-	border-left-style: double;
-	border-top-color: #000000;
-	border-right-color: #000000;
-	border-bottom-color: #000000;
-	border-left-color: #000000;
-}
-
-.title {
-	font-weight: bold;
-	border-bottom-style: ridge;
-	font-size: 14px;
-}
-
-.header {
-	margin-left: 50px;
-	clear: both;
-	height: 80px;
-	vertical-align: bottom;
-}
-
-.bib {
-	clear: both;
-}
-
-.pic {
-	background-image: url(images/keyword.jpg);
-	background-repeat: no-repeat;
-	clear: none;
-	float: left;
-	height: 80px;
-	width: 80px;
-}
-
-.year_number {
-	
-}
-
-.year_number {
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-khtml-border-radius: 3px;
-	border-radius: 3px;
-	background-color: #CCCCCC;
-	border-top-style: solid;
-	border-left-style: solid;
-	font-size: 16px;
-	font-weight: bold;
-}
-
-p {
-	
+@media (max-width: 600px) {
+    .profile-header { flex-direction: column; text-align: center; }
 }
