@@ -1,98 +1,45 @@
-/* 基础重置 */
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    background-color: #fdfdfd;
+body { 
+    font-family: "Segoe UI", "Palatino", serif; 
+    line-height: 1.6; 
+    max-width: 850px; 
+    margin: 0 auto; 
+    padding: 30px; 
+    color: #333; 
 }
 
 /* 导航栏样式 */
-nav {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
+nav { 
+    border-bottom: 2px solid #003366; 
+    padding-bottom: 10px; 
+    margin-bottom: 30px; 
+}
+nav a { 
+    text-decoration: none; 
+    color: #003366; 
+    font-weight: bold; 
+    margin-right: 20px; 
+    font-size: 1.1em;
+}
+nav a:hover { color: #cc0000; }
+
+/* 响应式头像布局 */
+.profile-header { 
+    display: flex; 
+    gap: 40px; 
+    align-items: center; 
     margin-bottom: 40px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #666;
-    margin-right: 25px;
-    font-weight: 500;
-}
-
-nav a.active {
-    color: #980000; /* 北大红 */
-    border-bottom: 2px solid #980000;
-    padding-bottom: 13px;
-}
-
-/* 左右布局核心：Flexbox */
-.profile-header {
-    display: flex;
-    align-items: flex-start; /* 顶部对齐 */
-    gap: 40px;               /* 左右间距 */
-    margin-bottom: 50px;
-}
-
-/* 左侧头像容器 */
-.profile-img-container img {
-    width: 200px;            /* 固定宽度 */
-    height: auto;
-    border-radius: 4px;      /* 轻微圆角 */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border: 1px solid #eee;
-}
-
-/* 右侧文字容器 */
-.profile-info {
-    flex: 1;                 /* 自动占满剩余空间 */
-}
-
-.profile-info h1 {
-    margin: 0 0 15px 0;
-    font-size: 2.2rem;
-    color: #1a1a1a;
-}
-
-.profile-info p {
-    margin: 5px 0;
 }
 
 .cv-button {
     display: inline-block;
-    background-color: #980000;
+    background-color: #003366;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 4px;
-    margin-top: 20px;
-    transition: background 0.3s;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
-.cv-button:hover {
-    background-color: #7a0000;
-}
-
-/* 标题样式 */
-h2 {
-    border-bottom: 2px solid #980000;
-    display: inline-block;
-    padding-right: 30px;
-    margin-bottom: 20px;
-}
-
-/* 移动端适配：当屏幕宽度小于 768px 时变为上下排列 */
-@media (max-width: 768px) {
-    .profile-header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .profile-img-container img {
-        width: 180px;
-    }
+@media (max-width: 600px) {
+    .profile-header { flex-direction: column; text-align: center; }
 }
