@@ -1,142 +1,20 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications | Chenxuan Chen</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<main class="max-w-4xl mx-auto px-6 py-12">
+    <h2 class="text-4xl font-bold text-slate-900 mb-12">Publications</h2>
     
-    <style>
-        body { font-family: 'Inter', -apple-system, sans-serif; background-color: #f8fafc; color: #1e293b; }
-        .bibtex-box { display: none; font-family: monospace; font-size: 0.85rem; background: #f1f5f9; padding: 1rem; border-radius: 0.5rem; margin-top: 0.75rem; border: 1px solid #e2e8f0; white-space: pre-wrap; }
-        .active-bib { display: block; animation: fadeIn 0.3s ease; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
-    </style>
-</head>
-
-<body class="antialiased">
-
-    <div class="max-w-6xl mx-auto px-6 py-12 lg:flex lg:gap-16">
-        
-        <aside class="lg:w-1/4 mb-10 lg:mb-0 lg:sticky lg:top-12 h-fit">
-            <div class="flex flex-col items-center lg:items-start">
-                <div class="w-32 h-32 bg-slate-200 rounded-2xl shadow-inner mb-6 flex items-center justify-center text-slate-400">
-                    Avatar
+    <div class="space-y-12">
+        <div>
+            <h3 class="text-xl font-bold text-rose-800 mb-6 border-b pb-2">2026</h3>
+            <div class="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-rose-200 transition-all">
+                <h4 class="text-lg font-bold text-slate-900 group-hover:text-rose-800 transition-colors">
+                    E-Commerce Into Rural: A Catalyst for Agricultural Mechanization in China
+                </h4>
+                <p class="text-slate-600 mt-2 text-sm italic">Review of Development Economics</p>
+                <div class="mt-4 flex gap-4 text-xs font-bold uppercase tracking-widest">
+                    <button onclick="toggleBib('bib1')" class="text-slate-400 hover:text-slate-900">BibTeX</button>
+                    <a href="#" class="text-slate-400 hover:text-slate-900">PDF</a>
                 </div>
-                <h1 class="text-3xl font-extrabold tracking-tight text-slate-900">Chenxuan Chen</h1>
-                <p class="text-rose-700 font-medium mt-1">Ph.D. Candidate</p>
-                <p class="text-slate-500 text-sm mt-1">Economic Science Institution</p>
-                
-                <nav class="mt-8 flex flex-col gap-3 w-full border-t pt-6 border-slate-200">
-                    <a href="#" class="text-slate-600 hover:text-rose-700 transition-colors font-medium">Home / About</a>
-                    <a href="#" class="text-rose-700 font-bold">Publications</a>
-                    <a href="#" class="text-slate-600 hover:text-rose-700 transition-colors font-medium">Research Interests</a>
-                    <a href="#" class="text-slate-600 hover:text-rose-700 transition-colors font-medium">CV / Other</a>
-                </nav>
+                <pre id="bib1" class="hidden font-mono text-xs bg-slate-50 p-4 mt-4 rounded-lg border">@article{...}</pre>
             </div>
-        </aside>
-
-        <main class="lg:w-3/4">
-            <header class="mb-12">
-                <h2 class="text-4xl font-bold text-slate-900 mb-4 tracking-tight">Publications</h2>
-                <p class="text-slate-500 leading-relaxed max-w-2xl">
-                    My research focuses on Digital Economy, Rural Development, and Public Policy, with a specific interest in the social impacts of technology in China.
-                </p>
-            </header>
-
-            <div class="mb-12">
-                <div class="flex items-center gap-4 mb-6">
-                    <span class="text-xl font-bold text-rose-800">2026</span>
-                    <div class="h-[1px] flex-1 bg-slate-200"></div>
-                </div>
-
-                <div class="group bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all mb-6">
-                    <h3 class="text-lg font-semibold text-slate-900 leading-snug group-hover:text-rose-800 transition-colors">
-                        E-Commerce Into Rural: A Catalyst for Agricultural Mechanization in China
-                    </h3>
-                    <div class="mt-2 text-slate-600 text-sm">
-                        <span class="font-bold text-slate-800 underline decoration-rose-400">Chenxuan Chen</span>, Zhiyi Meng, Qi Wang
-                    </div>
-                    <div class="mt-2 flex items-center gap-3">
-                        <span class="text-rose-700 text-xs font-bold uppercase tracking-wider italic">Review of Development Economics</span>
-                    </div>
-                    <div class="mt-4 flex gap-4">
-                        <button onclick="toggleBib('bib1')" class="text-xs font-semibold text-slate-400 hover:text-slate-700 underline">BibTeX</button>
-                        <a href="#" class="text-xs font-semibold text-slate-400 hover:text-slate-700 underline">PDF</a>
-                    </div>
-                    <pre id="bib1" class="bibtex-box">@article{chen2026ecommerce,
-  title={E-Commerce Into Rural: A Catalyst for Agricultural Mechanization in China},
-  author={Chen, Chenxuan and Meng, Zhiyi and Wang, Qi},
-  journal={Review of Development Economics},
-  year={2026}
-}</pre>
-                </div>
-
-                <div class="group bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                    <h3 class="text-lg font-semibold text-slate-900 leading-snug group-hover:text-rose-800 transition-colors">
-                        The Effect of Short Videos on Obesity: Evidence from China
-                    </h3>
-                    <div class="mt-2 text-slate-600 text-sm">
-                        <span class="font-bold text-slate-800 underline decoration-rose-400">Chenxuan Chen</span>, Qi Wang
-                    </div>
-                    <div class="mt-2 flex items-center gap-3">
-                        <span class="text-rose-700 text-xs font-bold uppercase tracking-wider italic">Economics & Human Biology</span>
-                    </div>
-                    <div class="mt-4 flex gap-4">
-                        <button onclick="toggleBib('bib2')" class="text-xs font-semibold text-slate-400 hover:text-slate-700 underline">BibTeX</button>
-                        <a href="#" class="text-xs font-semibold text-slate-400 hover:text-slate-700 underline">Project Page</a>
-                    </div>
-                    <pre id="bib2" class="bibtex-box">@article{chen2026obesity,
-  title={The Effect of Short Videos on Obesity: Evidence from China},
-  author={Chen, Chenxuan and Wang, Qi},
-  journal={Economics & Human Biology},
-  year={2026}
-}</pre>
-                </div>
-            </div>
-
-            <div class="mb-12">
-                <div class="flex items-center gap-4 mb-6">
-                    <span class="text-xl font-bold text-rose-800">2025</span>
-                    <div class="h-[1px] flex-1 bg-slate-200"></div>
-                </div>
-
-                <div class="group bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all mb-6">
-                    <h3 class="text-lg font-semibold text-slate-900 leading-snug group-hover:text-rose-800 transition-colors">
-                        Does Adult Digital Learning Pay Off? The Impact on Labor Market Returns
-                    </h3>
-                    <div class="mt-2 text-slate-600 text-sm">
-                        Wei Lei, <span class="font-bold text-slate-800 underline decoration-rose-400 text-rose-800">Chenxuan Chen*</span>
-                    </div>
-                    <div class="mt-2 flex items-center gap-3">
-                        <span class="text-rose-700 text-xs font-bold uppercase tracking-wider italic">Review of Income and Wealth</span>
-                    </div>
-                    <div class="mt-4 flex gap-4">
-                        <button onclick="toggleBib('bib3')" class="text-xs font-semibold text-slate-400 hover:text-slate-700 underline">BibTeX</button>
-                        <a href="#" class="text-xs font-semibold text-slate-400 hover:text-slate-700 underline">DOI</a>
-                    </div>
-                    <pre id="bib3" class="bibtex-box">@article{lei2025digital,
-  title={Does Adult Digital Learning Pay Off? The Impact on Labor Market Returns},
-  author={Lei, Wei and Chen, Chenxuan},
-  journal={Review of Income and Wealth},
-  year={2025}
-}</pre>
-                </div>
-            </div>
-            
-            <footer class="mt-20 border-t border-slate-200 pt-8 text-center text-slate-400 text-sm">
-                &copy; 2026 Chenxuan Chen. Built with Tailwind CSS.
-            </footer>
-        </main>
+        </div>
     </div>
-
-    <script>
-        function toggleBib(id) {
-            const el = document.getElementById(id);
-            el.classList.toggle('active-bib');
-        }
-    </script>
-
-</body>
-</html>
+</main>
