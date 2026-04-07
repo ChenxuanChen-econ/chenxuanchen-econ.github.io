@@ -1,71 +1,105 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <title>Research | Chenxuan Chen</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research | Chenxuan Chen</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-neutral-50 text-neutral-800 font-sans">
 
-<!-- ===== 导航栏 ===== -->
-<nav>
-    <a href="index.html">About Me</a>
-    <a href="research.html" class="active">Research</a>
-    <a href="other.html">Other</a>
+<!-- ===== NAVBAR ===== -->
+<nav class="fixed top-0 w-full bg-white/80 backdrop-blur border-b z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+    <h1 class="text-lg font-semibold">Chenxuan Chen</h1>
+    <div class="space-x-6 text-sm">
+      <a href="index.html" class="hover:text-red-700">About</a>
+      <a href="research.html" class="text-red-700 font-medium">Research</a>
+      <a href="other.html" class="hover:text-red-700">Other</a>
+    </div>
+  </div>
 </nav>
 
-<!-- ===== 页面标题 ===== -->
+<!-- ===== MAIN ===== -->
+<main class="pt-24 max-w-5xl mx-auto px-4 space-y-10">
+
+<!-- ===== 标题 ===== -->
 <section>
-    <h2>Publications</h2>
+  <h2 class="text-2xl font-bold border-l-4 border-red-700 pl-3 mb-6">
+    Publications
+  </h2>
 
-    <!-- ===== 2026 ===== -->
-    <h3 class="year">2026</h3>
+  <!-- ===== 2026 ===== -->
+  <div>
+    <h3 class="text-lg font-semibold text-neutral-500 mb-4">2026</h3>
 
-    <div class="paper">
-        <p>
-            <strong>Chenxuan Chen</strong>, Zhiyi Meng, Qi Wang.
-            <br>
-            “E-Commerce Into Rural: A Catalyst for Agricultural Mechanization in China.”
-            <br>
-            <em>Review of Development Economics</em>.
+    <div class="space-y-4">
+
+      <div class="p-4 bg-white rounded-lg border hover:shadow transition">
+        <p class="font-medium">
+          Chenxuan Chen, Zhiyi Meng, Qi Wang
         </p>
-    </div>
-
-    <div class="paper">
-        <p>
-            <strong>Chenxuan Chen</strong>, Qi Wang.
-            <br>
-            “The Effect of Short Videos on Obesity: Evidence from China.”
-            <br>
-            <em>Economics & Human Biology</em>.
+        <p class="mt-1">
+          “E-Commerce Into Rural: A Catalyst for Agricultural Mechanization in China.”
         </p>
-    </div>
-
-    <!-- ===== 2025 ===== -->
-    <h3 class="year">2025</h3>
-
-    <div class="paper">
-        <p>
-            Wei Lei, <strong>Chenxuan Chen*</strong>.
-            <br>
-            “Does Adult Digital Learning Pay Off? The Impact on Labor Market Returns.”
-            <br>
-            <em>Review of Income and Wealth</em>.
+        <p class="text-sm text-neutral-500 mt-1 italic">
+          Review of Development Economics
         </p>
-    </div>
+      </div>
 
-    <div class="paper">
-        <p>
-            <strong>Chenxuan Chen*</strong>.
-            <br>
-            “Fintech and Absolute Intergenerational Mobility: Evidence from Digital Finance Development in China.”
-            <br>
-            <em>Structural Change and Economic Dynamics</em>.
+      <div class="p-4 bg-white rounded-lg border hover:shadow transition">
+        <p class="font-medium">
+          Chenxuan Chen, Qi Wang
         </p>
+        <p class="mt-1">
+          “The Effect of Short Videos on Obesity: Evidence from China.”
+        </p>
+        <p class="text-sm text-neutral-500 mt-1 italic">
+          Economics & Human Biology
+        </p>
+      </div>
+
     </div>
+  </div>
+
+  <!-- ===== 2025 ===== -->
+  <div>
+    <h3 class="text-lg font-semibold text-neutral-500 mt-8 mb-4">2025</h3>
+
+    <div class="space-y-4">
+
+      <div class="p-4 bg-white rounded-lg border hover:shadow transition">
+        <p class="font-medium">
+          Wei Lei, Chenxuan Chen*
+        </p>
+        <p class="mt-1">
+          “Does Adult Digital Learning Pay Off? The Impact on Labor Market Returns.”
+        </p>
+        <p class="text-sm text-neutral-500 mt-1 italic">
+          Review of Income and Wealth
+        </p>
+      </div>
+
+      <div class="p-4 bg-white rounded-lg border hover:shadow transition">
+        <p class="font-medium">
+          Chenxuan Chen*
+        </p>
+        <p class="mt-1">
+          “Fintech and Absolute Intergenerational Mobility: Evidence from Digital Finance Development in China.”
+        </p>
+        <p class="text-sm text-neutral-500 mt-1 italic">
+          Structural Change and Economic Dynamics
+        </p>
+      </div>
+
+    </div>
+  </div>
 
 </section>
+
+</main>
 
 </body>
 </html>
