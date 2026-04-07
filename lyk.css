@@ -175,4 +175,51 @@ hr {
         width: 180px;
         height: 180px;
     }
+
+	/* ===== 年份标题 ===== */
+	.year {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    color: #666;
+    font-weight: 600;
+	}
+
+/* ===== 单篇论文块 ===== */
+	.paper {
+    margin-bottom: 18px;
+    padding-left: 10px;
+	}
+
+/* 论文标题更突出 */
+	.paper p {
+    margin: 0;
+    line-height: 1.6;
+	}
+/* ===== 活动块（conference） ===== */
+.activity {
+    margin-bottom: 18px;
+    padding-left: 10px;
+}
+
+/* ===== 技能标签（核心美化点） ===== */
+	.skills {
+    margin-top: 10px;
+	}
+
+	.skills span {
+    display: inline-block;
+    background-color: #f3f3f3;
+    color: #333;
+    padding: 6px 12px;
+    margin: 5px 8px 5px 0;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+	}
+
+	.skills span:hover {
+    background-color: #980000;
+    color: white;
+	}
+
 }
