@@ -24,7 +24,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
+            background-color: #f8fafc;
             color: #1e293b;
         }
 
@@ -55,6 +55,20 @@
             width: 100%;
             height: 2px;
             background: #be123c;
+        }
+
+
+        /* =========================================================
+           Section title
+        ========================================================= */
+
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #9f1239;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 8px;
+            margin-bottom: 22px;
         }
 
 
@@ -101,8 +115,8 @@
         }
 
         /*
-           Author links look exactly like normal text:
-           no blue color and no underline
+           Coauthor links look exactly like normal text.
+           They are clickable but have no color or underline.
         */
 
         .coauthor-link {
@@ -134,19 +148,18 @@
 
         .paper-link {
             color: #1d4ed8;
-
             font-size: 0.9rem;
 
             text-decoration: underline;
             text-underline-offset: 2px;
 
             margin-left: 6px;
-
             cursor: pointer;
 
             background: none;
             border: none;
             padding: 0;
+
             font-family: inherit;
         }
 
@@ -164,7 +177,7 @@
 
             padding: 14px 16px;
 
-            background: #f8fafc;
+            background: #ffffff;
 
             border: 1px solid #e2e8f0;
             border-radius: 5px;
@@ -184,10 +197,19 @@
             overflow-x: auto;
         }
 
+
+        /* =========================================================
+           Optional notes for working papers
+        ========================================================= */
+
+        .paper-note {
+            color: #64748b;
+            font-style: italic;
+        }
+
     </style>
 
 </head>
-
 
 
 <body class="antialiased">
@@ -197,7 +219,7 @@
      Navigation
 ========================================================= -->
 
-<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
 
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
@@ -216,6 +238,13 @@
 
             <a
                 href="research.html"
+                class="nav-link"
+            >
+                Research
+            </a>
+
+            <a
+                href="publications.html"
                 class="nav-link active-link"
             >
                 Publications
@@ -237,81 +266,84 @@
 
 
 <!-- =========================================================
-     Publications
+     Main
 ========================================================= -->
 
 <main class="max-w-5xl mx-auto px-6 py-14">
 
 
-    <!-- Page Title -->
+    <!-- =========================================================
+         Publications
+    ========================================================== -->
 
-    <h2 class="text-4xl font-bold text-slate-900 mb-12">
-        Publications
-    </h2>
+    <section class="mb-16">
+
+        <h2 class="text-4xl font-bold text-slate-900 mb-10">
+            Publications
+        </h2>
 
 
+        <div class="space-y-8">
 
-    <div class="space-y-8">
 
+            <!-- =====================================================
+                 1. Short Videos
+            ====================================================== -->
 
-        <!-- =====================================================
-             1. Short Videos
-        ====================================================== -->
+            <div class="publication-item">
 
-        <div class="publication-item">
+                <p class="text-[17px] leading-8 text-slate-800">
 
-            <p class="text-[17px] leading-8 text-slate-800">
+                    <span class="paper-title">
+                        The Effect of Short Videos on Obesity:
+                        Evidence from China
+                    </span>,
 
-                <span class="paper-title">
-                    The Effect of Short Videos on Obesity:
-                    Evidence from China
-                </span>,
+                    <span class="coauthor">
+                        with
 
-                <span class="coauthor">
-                    with
+                        <a
+                            href="https://bs.scu.edu.cn/kuaijixue/202201/7758.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="coauthor-link"
+                        >
+                            Qi Wang
+                        </a>
+                    </span>,
+
+                    <span class="journal">
+                        Economics &amp; Human Biology
+                    </span>,
+
+                    <span class="year">
+                        2026
+                    </span>.
 
                     <a
-                        href="https://bs.scu.edu.cn/kuaijixue/202201/7758.html"
+                        href="publications/Chen和Wang-2026-The effect of short videos on obesity.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="coauthor-link"
+                        class="paper-link"
                     >
-                        Qi Wang
+                        PDF
                     </a>
-                </span>,
 
-                <span class="journal">
-                    Economics &amp; Human Biology
-                </span>,
+                    <button
+                        type="button"
+                        onclick="toggleBib('bib_obesity')"
+                        class="paper-link"
+                    >
+                        BibTeX
+                    </button>
 
-                <span class="year">
-                    2026
-                </span>.
-
-                <a
-                    href="publications/Chen和Wang-2026-The effect of short videos on obesity.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="paper-link"
-                >
-                    PDF
-                </a>
-
-                <button
-                    type="button"
-                    onclick="toggleBib('bib_obesity')"
-                    class="paper-link"
-                >
-                    BibTeX
-                </button>
-
-            </p>
+                </p>
 
 
-            <pre
-                id="bib_obesity"
-                class="bibtex-box hidden"
-            >@article{chen2026obesity,
+                <pre
+                    id="bib_obesity"
+                    class="bibtex-box hidden"
+                >@article{chen2026obesity,
   title   = {The Effect of Short Videos on Obesity: Evidence from China},
   author  = {Chen, Chenxuan and Wang, Qi},
   journal = {Economics \& Human Biology},
@@ -320,138 +352,138 @@
   year    = {2026}
 }</pre>
 
-        </div>
+            </div>
 
 
 
-        <!-- =====================================================
-             2. E-Commerce
-        ====================================================== -->
+            <!-- =====================================================
+                 2. E-Commerce
+            ====================================================== -->
 
-        <div class="publication-item">
+            <div class="publication-item">
 
-            <p class="text-[17px] leading-8 text-slate-800">
+                <p class="text-[17px] leading-8 text-slate-800">
 
-                <span class="paper-title">
-                    E-Commerce into Rural:
-                    A Catalyst for Agricultural Mechanization in China
-                </span>,
+                    <span class="paper-title">
+                        E-Commerce into Rural:
+                        A Catalyst for Agricultural Mechanization in China
+                    </span>,
 
-                <span class="coauthor">
-                    with
+                    <span class="coauthor">
+                        with
+
+                        <a
+                            href="https://bs.scu.edu.cn/guanlikexue/201909/5763.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="coauthor-link"
+                        >
+                            Zhiyi Meng
+                        </a>
+
+                        and
+
+                        <a
+                            href="https://bs.scu.edu.cn/kuaijixue/202201/7758.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="coauthor-link"
+                        >
+                            Qi Wang
+                        </a>
+                    </span>,
+
+                    <span class="journal">
+                        Review of Development Economics
+                    </span>,
+
+                    <span class="year">
+                        2026
+                    </span>.
 
                     <a
-                        href="https://bs.scu.edu.cn/guanlikexue/201909/5763.html"
+                        href="publications/Chen 等 - 2026 - E-Commerce Into Rural A Catalyst for Agricultural Mechanization in China.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="coauthor-link"
+                        class="paper-link"
                     >
-                        Zhiyi Meng
+                        PDF
                     </a>
 
-                    and
-
-                    <a
-                        href="https://bs.scu.edu.cn/kuaijixue/202201/7758.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="coauthor-link"
+                    <button
+                        type="button"
+                        onclick="toggleBib('bib_rural')"
+                        class="paper-link"
                     >
-                        Qi Wang
-                    </a>
-                </span>,
+                        BibTeX
+                    </button>
 
-                <span class="journal">
-                    Review of Development Economics
-                </span>,
-
-                <span class="year">
-                    2026
-                </span>.
-
-                <a
-                    href="publications/Chen 等 - 2026 - E-Commerce Into Rural A Catalyst for Agricultural Mechanization in China.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="paper-link"
-                >
-                    PDF
-                </a>
-
-                <button
-                    type="button"
-                    onclick="toggleBib('bib_rural')"
-                    class="paper-link"
-                >
-                    BibTeX
-                </button>
-
-            </p>
+                </p>
 
 
-            <pre
-                id="bib_rural"
-                class="bibtex-box hidden"
-            >@article{chen2026ecommerce,
+                <pre
+                    id="bib_rural"
+                    class="bibtex-box hidden"
+                >@article{chen2026ecommerce,
   title   = {E-Commerce into Rural: A Catalyst for Agricultural Mechanization in China},
   author  = {Chen, Chenxuan and Meng, Zhiyi and Wang, Qi},
   journal = {Review of Development Economics},
   year    = {2026}
 }</pre>
 
-        </div>
+            </div>
 
 
 
-        <!-- =====================================================
-             3. Fintech
-        ====================================================== -->
+            <!-- =====================================================
+                 3. Fintech
+            ====================================================== -->
 
-        <div class="publication-item">
+            <div class="publication-item">
 
-            <p class="text-[17px] leading-8 text-slate-800">
+                <p class="text-[17px] leading-8 text-slate-800">
 
-                <span class="paper-title">
-                    Fintech and Intergenerational Mobility:
-                    Evidence from Digital Finance Development in China
-                </span>,
+                    <span class="paper-title">
+                        Fintech and Intergenerational Mobility:
+                        Evidence from Digital Finance Development in China
+                    </span>,
 
-                <span class="coauthor">
-                    Solo Author
-                </span>,
+                    <span class="coauthor">
+                        Solo Author
+                    </span>,
 
-                <span class="journal">
-                    Structural Change and Economic Dynamics
-                </span>,
+                    <span class="journal">
+                        Structural Change and Economic Dynamics
+                    </span>,
 
-                <span class="year">
-                    2025
-                </span>.
+                    <span class="year">
+                        2025
+                    </span>.
 
-                <a
-                    href="publications/Chen - 2025 - Fintech and absolute intergenerational mobility Evidence from digital finance development in China.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="paper-link"
-                >
-                    PDF
-                </a>
+                    <a
+                        href="publications/Chen - 2025 - Fintech and absolute intergenerational mobility Evidence from digital finance development in China.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="paper-link"
+                    >
+                        PDF
+                    </a>
 
-                <button
-                    type="button"
-                    onclick="toggleBib('bib_fintech')"
-                    class="paper-link"
-                >
-                    BibTeX
-                </button>
+                    <button
+                        type="button"
+                        onclick="toggleBib('bib_fintech')"
+                        class="paper-link"
+                    >
+                        BibTeX
+                    </button>
 
-            </p>
+                </p>
 
 
-            <pre
-                id="bib_fintech"
-                class="bibtex-box hidden"
-            >@article{chen2025fintech,
+                <pre
+                    id="bib_fintech"
+                    class="bibtex-box hidden"
+                >@article{chen2025fintech,
   title   = {Fintech and Intergenerational Mobility: Evidence from Digital Finance Development in China},
   author  = {Chen, Chenxuan},
   journal = {Structural Change and Economic Dynamics},
@@ -460,59 +492,59 @@
   year    = {2025}
 }</pre>
 
-        </div>
+            </div>
 
 
 
-        <!-- =====================================================
-             4. Digital Learning
-        ====================================================== -->
+            <!-- =====================================================
+                 4. Digital Learning
+            ====================================================== -->
 
-        <div class="publication-item">
+            <div class="publication-item">
 
-            <p class="text-[17px] leading-8 text-slate-800">
+                <p class="text-[17px] leading-8 text-slate-800">
 
-                <span class="paper-title">
-                    Does Adult Digital Learning Pay Off?
-                    The Impact on Labor Market Returns
-                </span>,
+                    <span class="paper-title">
+                        Does Adult Digital Learning Pay Off?
+                        The Impact on Labor Market Returns
+                    </span>,
 
-                <span class="coauthor">
-                    with Wei Lei
-                </span>,
+                    <span class="coauthor">
+                        with Wei Lei
+                    </span>,
 
-                <span class="journal">
-                    Review of Income and Wealth
-                </span>,
+                    <span class="journal">
+                        Review of Income and Wealth
+                    </span>,
 
-                <span class="year">
-                    2025
-                </span>.
+                    <span class="year">
+                        2025
+                    </span>.
 
-                <a
-                    href="publications/Lei和Chen - 2025 - Does Adult Digital Learning Pay Off The Impact on Labor Market Returns.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="paper-link"
-                >
-                    PDF
-                </a>
+                    <a
+                        href="publications/Lei和Chen - 2025 - Does Adult Digital Learning Pay Off The Impact on Labor Market Returns.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="paper-link"
+                    >
+                        PDF
+                    </a>
 
-                <button
-                    type="button"
-                    onclick="toggleBib('bib_digital')"
-                    class="paper-link"
-                >
-                    BibTeX
-                </button>
+                    <button
+                        type="button"
+                        onclick="toggleBib('bib_digital')"
+                        class="paper-link"
+                    >
+                        BibTeX
+                    </button>
 
-            </p>
+                </p>
 
 
-            <pre
-                id="bib_digital"
-                class="bibtex-box hidden"
-            >@article{lei2025digital,
+                <pre
+                    id="bib_digital"
+                    class="bibtex-box hidden"
+                >@article{lei2025digital,
   title   = {Does Adult Digital Learning Pay Off? The Impact on Labor Market Returns},
   author  = {Lei, Wei and Chen, Chenxuan},
   journal = {Review of Income and Wealth},
@@ -521,10 +553,67 @@
   year    = {2025}
 }</pre>
 
+            </div>
+
+
         </div>
 
+    </section>
 
-    </div>
+
+
+    <!-- =========================================================
+         Working Papers
+    ========================================================== -->
+
+    <section class="mb-14">
+
+        <h3 class="section-title">
+            Working Papers
+        </h3>
+
+        <div class="space-y-7">
+
+
+            <!-- Working Paper 1 -->
+
+            <div class="publication-item">
+
+                <p class="text-[17px] leading-8 text-slate-800">
+
+                    <span class="paper-title">
+                        School Consolidation
+                    </span>,
+
+                    <span class="coauthor">
+                        with
+                        <a
+                            href="https://www.haolunxu.xyz"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="coauthor-link"
+                        >
+                            Haolun Xu
+                        </a>
+                         
+                    </span>.
+
+                    <span class="paper-note">
+                        Draft coming soon.
+                    </span>
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+
 
 
 </main>
@@ -551,5 +640,100 @@
 
 
 </body>
-
 </html>
+
+
+    <!-- =========================================================
+         Selected Work in Progress
+    ========================================================== -->
+
+    <section class="mb-14">
+
+        <h3 class="section-title">
+            Selected Work in Progress
+        </h3>
+
+        <div class="space-y-7">
+
+
+            <!--
+            Example:
+
+            <div class="publication-item">
+
+                <p class="text-[17px] leading-8 text-slate-800">
+
+                    <span class="paper-title">
+                        Paper Title
+                    </span>,
+
+                    <span class="coauthor">
+                        with Coauthor Name
+                    </span>.
+
+                </p>
+
+            </div>
+            -->
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         Papers in Chinese
+    ========================================================== -->
+
+    <section class="mb-10">
+
+        <h3 class="section-title">
+            Papers in Chinese
+        </h3>
+
+        <div class="space-y-7">
+
+
+            <!--
+            Example:
+
+            <div class="publication-item">
+
+                <p class="text-[17px] leading-8 text-slate-800">
+
+                    <span class="paper-title">
+                        中文文章标题
+                    </span>,
+
+                    <span class="coauthor">
+                        with XXX
+                    </span>,
+
+                    <span class="journal">
+                        中文期刊名称
+                    </span>,
+
+                    <span class="year">
+                        2026
+                    </span>.
+
+                    <a
+                        href="publications/example.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="paper-link"
+                    >
+                        PDF
+                    </a>
+
+                </p>
+
+            </div>
+            -->
+
+
+        </div>
+
+    </section>
